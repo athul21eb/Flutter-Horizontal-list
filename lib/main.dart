@@ -38,7 +38,7 @@ class MyHomepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text(
+        title: const Text(
           "Movies ",
           style: TextStyle(
             fontSize: 30,
@@ -50,17 +50,15 @@ class MyHomepage extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height * 0.5,
         child: ListView.builder(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemCount: imageList.length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: EdgeInsets.all(10),
-              child: Container(
-                child: Image.asset(
-                  imageList[index],
-                  fit: BoxFit.cover,
-                ),
+              padding: const EdgeInsets.all(10),
+              child: Image.asset(
+                imageList[index],
+                fit: BoxFit.cover,
               ),
             );
           },
